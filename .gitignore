@@ -1,0 +1,78 @@
+# Operating System
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+*~
+
+# IDEs and Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+*.sublime-project
+
+# Logs
+*.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Dependencies
+node_modules/
+bower_components/
+vendor/
+.pnp
+.pnp.js
+
+# Build outputs
+dist/
+build/
+out/
+target/
+*.pyc
+__pycache__/
+*.class
+*.o
+*.so
+*.dll
+*.exe
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Package manager
+.npm
+.yarn/
+package-lock.json
+yarn.lock
+Pipfile.lock
+poetry.lock
+
+# Coverage
+coverage/
+*.cover
+.coverage
+.coverage.*
+htmlcov/
+.nyc_output
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.bak
+*.backup
