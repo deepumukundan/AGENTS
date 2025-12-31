@@ -8,7 +8,7 @@
 4. Finally, use Read tool on `~/code/AGENTS/AGENTS.md` to load rules into current session
 
 ## Rule 2: Permissions
-All Bash commands are allowed. rm and any destructive commands do require user approval.
+All shell commands are allowed. rm and any destructive commands do require user approval.
 
 ## Rule 3: Issue Tracking with beads (bd)
 **Use bd for ALL task tracking. NEVER use TodoWrite or TODO comments.**
