@@ -49,6 +49,7 @@ After merge: `git branch -d ISSUE-ID && git push origin --delete ISSUE-ID`
 git commit -m "Brief description (ISSUE-ID)"
 ```
 Push automatically on feature branches, never on master/main/development without approval.
+**Prefer squash** instead of merge.
 
 **Parallel PRs:**
 - Start each from latest master/main/development, claim issue, commit code + beads together
