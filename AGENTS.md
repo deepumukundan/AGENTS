@@ -71,10 +71,5 @@ Push automatically on feature branches, never on master/main/development without
 
 ## Landing the Plane
 When user says "land the plane" or "pass the baton":
-1. File beads for remaining work
-2. Run quality gates (tests, lint) if code changed
-3. Close finished issues
-4. Commit and push beads changes
-5. Clean up: `git stash clear && git remote prune origin`
-6. Provide session summary and recommended next prompt
-7. Spawn new agent with continuation prompt using Task tool
+- Follow the "Landing the Plane" workflow in repo's AGENTS.md (auto-added by `bd init`)
+- After completing that workflow, **optionally spawn new agent** with continuation prompt using Task tool
