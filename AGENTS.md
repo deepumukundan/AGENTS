@@ -3,9 +3,9 @@
 ## Rule 1: Repository Setup
 **When entering a new repository:**
 1. Run `bd onboard` if `.beads/` doesn't exist
-2. Check if repo's AGENTS.md starts with `@~/code/AGENTS/AGENTS.md`
+2. After the `bd onboard` stage, check if repo's AGENTS.md starts with `@~/code/AGENTS/AGENTS.md`
 3. If missing, add that include at the very top (enables auto-loading via chain: `CLAUDE.md (Automatic when using claude code) → @AGENTS.md (Most AI tools) → This AGENTS.md`)
-4. Immediately use Read tool on `~/code/AGENTS/AGENTS.md` to load rules into current session
+4. Finally, use Read tool on `~/code/AGENTS/AGENTS.md` to load rules into current session
 
 ## Rule 2: Issue Tracking with beads (bd)
 **Use bd for ALL task tracking. NEVER use TodoWrite or TODO comments.**
