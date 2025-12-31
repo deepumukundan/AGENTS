@@ -7,7 +7,10 @@
 3. If missing, add that include at the very top (enables auto-loading via chain: `CLAUDE.md (Automatic when using claude code) → @AGENTS.md (Most AI tools) → This AGENTS.md`)
 4. Finally, use Read tool on `~/code/AGENTS/AGENTS.md` to load rules into current session
 
-## Rule 2: Issue Tracking with beads (bd)
+## Rule 2: Permissions
+All Bash commands are allowed. rm and any destructive commands do require user approval.
+
+## Rule 3: Issue Tracking with beads (bd)
 **Use bd for ALL task tracking. NEVER use TodoWrite or TODO comments.**
 
 ```bash
@@ -23,7 +26,7 @@ bd close ID --reason "Done"           # Complete work
 
 Always commit `.beads/issues.jsonl` with code changes.
 
-## Rule 3: Planning & Approval
+## Rule 4: Planning & Approval
 **Before starting work:**
 - Ask clarifying questions for ambiguous requirements, architectural decisions, multi-file changes, or unclear scope
 - Request approval before working on any bead issue or installing dependencies:
@@ -35,7 +38,7 @@ Proceed? [Yes/No]
 ```
 Keep questions focused and actionable. Don't ask about obvious details.
 
-## Rule 4: Git Workflow
+## Rule 5: Git Workflow
 **Branching:** NEVER commit directly to master/main/development. Use feature branches + PR.
 ```bash
 git checkout -b ISSUE-ID              # Create branch
@@ -56,14 +59,14 @@ Push automatically on feature branches, never on master/main/development without
 - After merge: close issue on the base branch
 - Conflicts: keep both lines if different IDs; same ID → newer timestamp wins; run `bd import`
 
-## Rule 5: Development Standards
+## Rule 6: Development Standards
 **Permissions:** All Bash commands allowed. `rm` requires user approval.
 
 **Types:** Prefer Python, Kotlin, TypeScript, Rust. For Python: always use type hints. Prefer TypeScript over JS.
 
 **Secrets:** Never print unless explicitly asked. Use placeholders (`API_KEY=<redacted>`).
 
-## Rule 6: Operational
+## Rule 7: Operational
 **Context:** Report usage after every response: `Context: XX% used`
 
 **Monitoring:** Exponential backoff (5s → 10s → 20s → 40s → 60s cap). Background processes when possible.
