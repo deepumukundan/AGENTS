@@ -62,7 +62,8 @@ Push automatically on feature branches, never on master/main/development without
 ## Rule 6: Development Standards
 **Permissions:** All Bash commands allowed. `rm` requires user approval.
 
-**Types:** Prefer Python, Kotlin, TypeScript, Rust. For Python: always use type hints. Prefer TypeScript over JS.
+**Types:** Prefer Python, Kotlin, TypeScript, Rust. Prefer TypeScript over JS.
+For Python: always use type hints and always try to activate the virtual env before running build and tests
 
 **Secrets:** Never print unless explicitly asked. Use placeholders (`API_KEY=<redacted>`).
 
