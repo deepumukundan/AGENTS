@@ -68,8 +68,6 @@ For Python: always use type hints and always try to activate the virtual env bef
 **Secrets:** Never print unless explicitly asked. Use placeholders (`API_KEY=<redacted>`).
 
 ## Rule 7: Operational
-**Context:** Report usage after every response: `Context: XX% used`
-
 **Monitoring:** Exponential backoff (5s → 10s → 20s → 40s → 60s cap). Background processes when possible.
 
 **Parallel agents:** Each uses own git worktree: `git worktree add ../REPO-ISSUE-ID -b ISSUE-ID <base-branch>`
