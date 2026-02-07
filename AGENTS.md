@@ -7,10 +7,22 @@
 3. If missing, add that include at the very top (enables auto-loading via chain: `CLAUDE.md (Automatic when using claude code) → @AGENTS.md (Most AI tools) → This AGENTS.md`)
 4. Finally, use Read tool on `~/code/AGENTS/AGENTS.md` to load rules into current session
 
-## Rule 2: Permissions
+## Rule 2: Code Search with ripgrep
+**Use `rg` (ripgrep) for all code searches:**
+- `rg` is blazing fast, respects .gitignore, and integrates seamlessly with terminals
+- Prefer `rg` over grep, `grep_search` tool, or manual file reading for search tasks
+- Use semantic_search tool only when pattern-based search won't find what you need
+- Examples:
+  ```bash
+  rg "pattern" --type ts              # Search TypeScript files
+  rg "function_name" -A 3 -B 3       # Show context lines
+  rg "TODO|FIXME" --no-heading        # Find all TODOs
+  ```
+
+## Rule 3: Permissions
 All shell commands are allowed. rm and any destructive commands do require user approval.
 
-## Rule 3: Issue Tracking with beads (bd)
+## Rule 4: Issue Tracking with beads (bd)
 **Use bd for ALL task tracking. NEVER use TodoWrite or TODO comments.**
 
 ```bash
@@ -26,7 +38,7 @@ bd close ID --reason "Done"           # Complete work
 
 Always commit `.beads/issues.jsonl` with code changes.
 
-## Rule 4: Planning & Approval
+## Rule 5: Planning & Approval
 **Before starting work:**
 - Ask clarifying questions for ambiguous requirements, architectural decisions, multi-file changes, or unclear scope
 - Request approval before working on any bead issue or installing dependencies:
@@ -38,7 +50,7 @@ Proceed? [Yes/No]
 ```
 Keep questions focused and actionable. Don't ask about obvious details.
 
-## Rule 5: Git Workflow
+## Rule 6: Git Workflow
 **Branching:** NEVER commit directly to master/main/development. Use feature branches + PR.
 ```bash
 git checkout -b ISSUE-ID              # Create branch
@@ -59,7 +71,7 @@ Push automatically on feature branches, never on master/main/development without
 - After merge: close issue on the base branch
 - Conflicts: keep both lines if different IDs; same ID → newer timestamp wins; run `bd import`
 
-## Rule 6: Development Standards
+## Rule 7: Development Standards
 **Permissions:** All Bash commands allowed. `rm` requires user approval.
 
 **Types:** Prefer Python, Kotlin, TypeScript, Rust. Prefer TypeScript over JS.
@@ -67,7 +79,7 @@ For Python: always use type hints and always try to activate the virtual env bef
 
 **Secrets:** Never print unless explicitly asked. Use placeholders (`API_KEY=<redacted>`).
 
-## Rule 7: Operational
+## Rule 8: Operational
 **Monitoring:** Exponential backoff (5s → 10s → 20s → 40s → 60s cap). Background processes when possible.
 
 **Parallel agents:** Each uses own git worktree: `git worktree add ../REPO-ISSUE-ID -b ISSUE-ID <base-branch>`
