@@ -42,9 +42,9 @@ gh pr create                          # Open PR
 ```
 After merge: `git branch -d ISSUE-ID && git push origin --delete ISSUE-ID`
 
-**Commits:** After every file change. Single-line messages.
+**Commits:** After every stable change set. Single-line messages.
 ```bash
-git commit -m "Brief description (ISSUE-ID)"
+git commit -m "ISSUE-ID Brief description"
 ```
 Push automatically on feature branches, never on master/main/development without approval.
 **Prefer squash** instead of merge.
