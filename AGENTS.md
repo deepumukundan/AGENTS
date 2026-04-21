@@ -18,8 +18,13 @@
   rg "TODO|FIXME" --no-heading        # Find all TODOs
   ```
 
-## Rule 3: Permissions
-All shell commands are allowed. rm and any destructive commands do require user approval.
+## Rule 3: Permissions & Development Standards
+**Permissions:** All shell commands allowed. `rm` and any destructive commands require user approval.
+
+**Languages:** Prefer Python, Kotlin, TypeScript, Rust. Prefer TypeScript over JS.
+For Python: always use type hints and always try to activate the virtual env before running build and tests.
+
+**Secrets:** Never print unless explicitly asked. Use placeholders (`API_KEY=<redacted>`).
 
 ## Rule 4: Planning & Approval
 **Before starting work:**
@@ -53,20 +58,7 @@ Push automatically on feature branches, never on master/main/development without
 - Start each from latest master/main/development
 - Conflicts: keep both lines if different IDs; same ID → newer timestamp wins
 
-## Rule 6: Development Standards
-**Permissions:** All Bash commands allowed. `rm` requires user approval.
-
-**Types:** Prefer Python, Kotlin, TypeScript, Rust. Prefer TypeScript over JS.
-For Python: always use type hints and always try to activate the virtual env before running build and tests
-
-**Secrets:** Never print unless explicitly asked. Use placeholders (`API_KEY=<redacted>`).
-
-## Rule 7: Operational
+## Rule 6: Operational
 **Monitoring:** Exponential backoff (5s → 10s → 20s → 40s → 60s cap). Background processes when possible.
 
 **Parallel agents:** Each uses own git worktree: `git worktree add ../REPO-ISSUE-ID -b ISSUE-ID <base-branch>`
-
-## Landing the Plane
-When user says "land the plane" or "pass the baton":
-- Follow the "Landing the Plane" workflow in repo's AGENTS.md
-- After completing that workflow, **optionally spawn new agent** with continuation prompt using Task tool
