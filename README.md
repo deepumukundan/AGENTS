@@ -8,8 +8,6 @@ Coding Agents instructions
 Please read and apply ~/code/AGENTS/AGENTS.md
 ```
 
-This will setup the new repo to use
-1. Beads for issue tracking
-2. Sets up Agents.md and Claude.md specific to the repo and @ imports the Agents.md from this repo for common rules
+This will setup the new repo to use AGENTS.md and CLAUDE.md specific to the repo and `@` imports the files from this repo for common rules
 
 Happy Coding!
